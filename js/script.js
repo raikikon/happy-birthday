@@ -18,6 +18,15 @@ $('#play').click(function () {
     $('.balloon-border').animate({
         top: -500
     }, 8000);
+     const now = new Date();
+      const unlockDate = new Date("2025-04-19T23:59:59");
+
+      if (now > unlockDate) {
+        document.getElementById("landing").style.display = "none";
+        document.getElementById("main-content").style.display = "block";
+      } else {
+        document.getElementById("message").textContent = "babe, time hasn't came yet 💖";
+      }
     var audio = $('.song')[0];
     audio.play();
 
