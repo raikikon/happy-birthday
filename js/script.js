@@ -16,7 +16,7 @@ $('#play').click(function () {
 
 
      const now = new Date();
-      const unlockDate = new Date("2025-04-17T23:59:59");
+      const unlockDate = new Date("2025-04-18T23:59:59");
 
       if (now > unlockDate) {
         $(".loader").fadeOut(1500);
