@@ -12,23 +12,26 @@ if (c != null) {
 }
 $(".main").fadeOut(1);
 $('#play').click(function () {
-    $(".loader").fadeOut(1500);
-    $(".main").fadeIn("slow");
-    sf.destroy();
-    $('.balloon-border').animate({
-        top: -500
-    }, 8000);
+
+
+
      const now = new Date();
-      const unlockDate = new Date("2025-04-19T23:59:59");
+      const unlockDate = new Date("2025-04-17T23:59:59");
 
       if (now > unlockDate) {
-        document.getElementById("landing").style.display = "none";
-        document.getElementById("main-content").style.display = "block";
+        $(".loader").fadeOut(1500);
+        $(".main").fadeIn("slow");
+        sf.destroy();
+        $('.balloon-border').animate({
+            top: -500
+        }, 8000);
+        var videoPlayer= document.getElementById('background-video');
+        videoPlayer.play();
       } else {
-        document.getElementById("message").textContent = "babe, time hasn't came yet 💖";
+         alert("Babe💖, time hasn't came yet 💖");
+      
       }
-    var audio = $('.song')[0];
-    audio.play();
+   
 
 });
 var typed = new Typed("#typed", {
